@@ -22,12 +22,12 @@
 2.常用字段与不常用字段分离,将查询频率的字段单拆出来.3.在需要关联统计的字段上,添加冗余字段
 
 列选择原则:
-整型&amp;gt;date,time&amp;gt;enum&amp;gt;varchar&amp;gt;blob&amp;gt;,text
+整型&amp;gt;date,time&amp;gt;enum&amp;gt;varchar&amp;gt;blob&amp;gt;text
 
 
 索引的类型索引定义：在mysql中也叫key,是储存引擎用于为了快速找到记录的一种数据结构.
 
-索引对于良好的性能很关键,当">
+索引对于良好的性能很关键,当表">
 <meta property="og:type" content="article">
 <meta property="og:title" content="优化索引 | Hexo">
 <meta property="og:url" content="http://yoursite.com/2017/03/14/优化索引/index.html">
@@ -38,13 +38,13 @@
 2.常用字段与不常用字段分离,将查询频率的字段单拆出来.3.在需要关联统计的字段上,添加冗余字段
 
 列选择原则:
-整型&amp;gt;date,time&amp;gt;enum&amp;gt;varchar&amp;gt;blob&amp;gt;,text
+整型&amp;gt;date,time&amp;gt;enum&amp;gt;varchar&amp;gt;blob&amp;gt;text
 
 
 索引的类型索引定义：在mysql中也叫key,是储存引擎用于为了快速找到记录的一种数据结构.
 
-索引对于良好的性能很关键,当">
-<meta property="og:updated_time" content="2017-03-14T10:34:13.000Z">
+索引对于良好的性能很关键,当表">
+<meta property="og:updated_time" content="2017-03-14T10:50:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="优化索引 | Hexo">
 <meta name="twitter:description" content="表的优化和列类型的索引
@@ -53,12 +53,12 @@
 2.常用字段与不常用字段分离,将查询频率的字段单拆出来.3.在需要关联统计的字段上,添加冗余字段
 
 列选择原则:
-整型&amp;gt;date,time&amp;gt;enum&amp;gt;varchar&amp;gt;blob&amp;gt;,text
+整型&amp;gt;date,time&amp;gt;enum&amp;gt;varchar&amp;gt;blob&amp;gt;text
 
 
 索引的类型索引定义：在mysql中也叫key,是储存引擎用于为了快速找到记录的一种数据结构.
 
-索引对于良好的性能很关键,当">
+索引对于良好的性能很关键,当表">
     
     
     
@@ -214,7 +214,7 @@ classes that you can use:
 <p>2.常用字段与不常用字段分离,将查询频率的字段单拆出来.<br>3.在需要关联统计的字段上,添加冗余字段</p>
 </li>
 <li><p>列选择原则:</p>
-<p>整型&gt;date,time&gt;enum&gt;varchar&gt;blob&gt;,text</p>
+<p>整型&gt;date,time&gt;enum&gt;varchar&gt;blob&gt;text</p>
 </li>
 </ul>
 <h3 id="索引的类型"><a href="#索引的类型" class="headerlink" title="索引的类型"></a>索引的类型</h3><p>索引定义：在mysql中也叫key,是储存引擎用于为了快速找到记录的一种数据结构.</p>
@@ -269,7 +269,7 @@ classes that you can use:
 </tr>
 <tr>
 <td>where a=3 and b like’%hh’and c =3</td>
-<td>啊能发挥,b,c不能</td>
+<td>a能发挥,b,c不能</td>
 </tr>
 </tbody>
 </table>
