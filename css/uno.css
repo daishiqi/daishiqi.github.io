@@ -1,5 +1,5 @@
 
-/* http://meyerweb.com/eric/tools/css/reset/
+
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -1243,7 +1243,7 @@ hr {
   padding: 0 60px; }
 
 .panel-main__content {
-  max-width: 620px;
+  max-width: 650px;
   margin: 0 auto; }
 
 .panel-main__content--fixed {
