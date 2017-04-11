@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      laravel之邮件发送 | Daisy&#39;s Blog
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Daisy">
+    
+    
+
+    <meta name="description" content="laravel自带SwiftMailer库，集成了多种邮件API，可以很方便的实现邮件的发送。在本教程中使用到的是SMTP（Simple Message Transfer Protocol）简单邮件传输协议，通常理解为邮件发送服务器。
+实验中使用163邮箱。编辑邮件配置文件：
+
+修改laravel/config/mail.php
+
+编辑mail.php
+
+return [  ‘driver’ =&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel之邮件发送 | Daisy's Blog">
+<meta property="og:url" content="http://yoursite.com/2016/05/10/laravel之邮件发送/index.html">
+<meta property="og:site_name" content="Daisy's Blog">
+<meta property="og:description" content="laravel自带SwiftMailer库，集成了多种邮件API，可以很方便的实现邮件的发送。在本教程中使用到的是SMTP（Simple Message Transfer Protocol）简单邮件传输协议，通常理解为邮件发送服务器。
+实验中使用163邮箱。编辑邮件配置文件：
+
+修改laravel/config/mail.php
+
+编辑mail.php
+
+return [  ‘driver’ =&amp;">
+<meta property="og:updated_time" content="2017-04-11T09:26:38.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="laravel之邮件发送 | Daisy's Blog">
+<meta name="twitter:description" content="laravel自带SwiftMailer库，集成了多种邮件API，可以很方便的实现邮件的发送。在本教程中使用到的是SMTP（Simple Message Transfer Protocol）简单邮件传输协议，通常理解为邮件发送服务器。
+实验中使用163邮箱。编辑邮件配置文件：
+
+修改laravel/config/mail.php
+
+编辑mail.php
+
+return [  ‘driver’ =&amp;">
+
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">这是最好的时代 也是最坏的时代</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          而我们要成为更好的自己
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/something" title="" class="">有料</a></li>
+              
+                
+                <li class="navigation__item"><a href="/tags" title="" class="">标签</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">laravel之邮件发送</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-05-10" class="post-meta__date date">2016-05-10</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>laravel自带SwiftMailer库，集成了多种邮件API，可以很方便的实现邮件的发送。在本教程中使用到的是SMTP（Simple Message Transfer Protocol）简单邮件传输协议，通常理解为邮件发送服务器。</p>
+<h4 id="实验中使用163邮箱。"><a href="#实验中使用163邮箱。" class="headerlink" title="实验中使用163邮箱。"></a>实验中使用163邮箱。</h4><p>编辑邮件配置文件：</p>
+<blockquote>
+<p>修改laravel/config/mail.php</p>
+</blockquote>
+<p>编辑mail.php</p>
+<blockquote>
+<p>return [<br>  ‘driver’ =&gt; env(‘MAIL_DRIVER’, ‘smtp’),<br>  ‘host’ =&gt; env(‘MAIL_HOST’, ‘smtp.163.com’),<br>  ‘port’ =&gt; env(‘MAIL_PORT’, 25),<br>  ‘from’ =&gt; [‘address’ =&gt; ‘shiqi_dai@163.com’,’name’ =&gt; ‘发件人’],<br>  ‘encryption’ =&gt; env(‘MAIL_ENCRYPTION’, ‘tls’),<br>  ‘username’ =&gt; env(‘MAIL_USERNAME’),<br>  ‘password’ =&gt; env(‘MAIL_PASSWORD’),<br>  ‘sendmail’ =&gt; ‘/usr/sbin/sendmail -bs’,<br>]</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>编辑环境配置文件<br>vim laravel/.env</p>
+<p>.env<br>MAIL_DRIVER=<br>MAIL_HOST=<br>MAIL_PORT=<br>MAIL_USERNAME=yourname@163.com<br>MAIL_PASSWORD=password<br>MAIL_ENCRYPTION=</p>
+</blockquote>
+<hr>
+<p>.env文件需要配置username和password其余为空，则会使用mail.php的配置。</p>
+<p><pre><br>1.driver用于配置默认的邮件发送驱动，Laravel支持多种邮件驱动方式，包括smtp、Mailgun、Maildrill、<br>Amazon SES、mail和sendmail，Mailgun和Amazon SES都是收费的Maildrill目前不支持中国区用户，这三个<br>都是第三方邮件服务。mail驱动使用PHP提供的mail函数发送，sendmail驱动通过Sendmail/Postfix（Linux）<br>提供的命令发送邮件，smtp驱动通过支持ESMTP的SMTP发送邮件。<br>就目前状况来看，使用smtp是最明智的选择，mail不安全，sendmail需要安装配置Sendmail/Postfix，其他要<br>么付费要么不能用。<br></pre></p>
+<p><pre><br>2.host是邮箱所在主机，比如我们使用163邮箱，对应值是smtp.163.com，使用QQ邮箱的话，对应值是smtp.qq.com。<br></pre></p>
+<p><pre><br>3.port用于配置邮箱发送服务端口号，比如一般默认值是25，但如果设置SMTP使用SSL加密，该值为465。<br>from配置项包含address和name，前者表示发送邮箱，后者表示发送邮件使用的用户名。<br></pre></p>
+<p><pre><br>4.encryption表示加密类型，可以设置为null表示不使用任何加密，也可以设置为tls或ssl。<br>username表示邮箱账号，比如yaojinbu@163.com<br></pre></p>
+<p><pre><br>5.password表示上述邮箱登录对应登录密码。注意QQ邮箱的话应该开启POP3|SMTP服务时给的密钥。<br>sendmail是在设置driver为sendmail时使用，用于指定sendmail命令路径。</pre></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="开始编写控制器、路由、模板。"><a href="#开始编写控制器、路由、模板。" class="headerlink" title="开始编写控制器、路由、模板。"></a>开始编写控制器、路由、模板。</h3><p>在路由中加入如下规则：</p>
+<blockquote>
+<p>Route::get(‘mail/send’,’MailController@send’);</p>
+</blockquote>
+<p>生成控制器</p>
+<blockquote>
+<p>php artisan make::controller MailController</p>
+</blockquote>
+<p>在laravel/app/Http/Controllers生成了一个MailController控制器，如下所示：</p>
+<blockquote>
+<p>//MailController.php<br>&lt;?php<br>namespace App\Http\Controllers;<br>use Illuminate\Http\Request;<br>use App\Http\Requests;<br>use App\Http\Controllers\Controller;<br>class MailController extends Controller<br>{<br>    //<br>}</p>
+</blockquote>
+<p>编辑控制器，加入以下的逻辑处理</p>
+<blockquote>
+<p>use Mail;<br>class MailController{<br>  public function send()<br>  {<br>        $name = ‘daisy’;<br>        $flag = Mail::send(‘emails.test’,[‘name’=&gt;$name],function($message){<br>            $to = ‘88888888@qq.com’;<br>            $message -&gt;to($to)-&gt;subject(‘邮件测试’);<br>        });<br>        if($flag){<br>            echo ‘发送邮件成功，请查收！’;<br>        }else{<br>            echo ‘发送邮件失败，请重试！’;<br>        }<br>  }<br>}</p>
+</blockquote>
+<hr>
+<p>Mail::send();需要传三个参数，第一个为引用的模板，第二个为给模板传递的变量，第三个为一个闭包，参数绑定Mail类的一个实例。</p>
+<hr>
+<p>在resources/emails下创建一个模板文件。</p>
+<blockquote>
+<p>test.blade.php<br>你好，这是一封测试文件。</p>
+</blockquote>
+<hr>
+<p>好，现在在服务器上进行测试了，在地址栏输入<em>**</em>.com/mail/send，发送成功。</p>
+
+  </section>
+
+  
+  
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2017 |<i class='icon icon-social-github'></i> Hello World | <a href="https://github.com/daishiqi">Daisy's GitHub</a>
+
+</footer>
+
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
