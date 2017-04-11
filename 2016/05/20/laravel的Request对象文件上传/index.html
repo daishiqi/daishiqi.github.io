@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      laravel的Request对象文件上传和helper函数 | Daisy&#39;s Blog
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Daisy">
+    
+    
+
+    <meta name="description" content="之前看见文件上传就头疼，自从用laravel之后再也不疼了~~  哈哈今天就看下炒鸡简单的request对象的文件上传
+关于request我们从http角度看..
+
+
+那么在laravel中如何声明一个request对象呢？
+1.第一种方法
+public function test(Request $requset){
+  //打印出来看一下都有什么信息?
+  //几乎包含你请求的所有信息
+  d">
+<meta property="og:type" content="article">
+<meta property="og:title" content="laravel的Request对象文件上传和helper函数 | Daisy's Blog">
+<meta property="og:url" content="http://yoursite.com/2016/05/20/laravel的Request对象文件上传/index.html">
+<meta property="og:site_name" content="Daisy's Blog">
+<meta property="og:description" content="之前看见文件上传就头疼，自从用laravel之后再也不疼了~~  哈哈今天就看下炒鸡简单的request对象的文件上传
+关于request我们从http角度看..
+
+
+那么在laravel中如何声明一个request对象呢？
+1.第一种方法
+public function test(Request $requset){
+  //打印出来看一下都有什么信息?
+  //几乎包含你请求的所有信息
+  d">
+<meta property="og:image" content="http://i1.piimg.com/4851/9fb932769757be5b.png">
+<meta property="og:updated_time" content="2017-04-11T09:28:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="laravel的Request对象文件上传和helper函数 | Daisy's Blog">
+<meta name="twitter:description" content="之前看见文件上传就头疼，自从用laravel之后再也不疼了~~  哈哈今天就看下炒鸡简单的request对象的文件上传
+关于request我们从http角度看..
+
+
+那么在laravel中如何声明一个request对象呢？
+1.第一种方法
+public function test(Request $requset){
+  //打印出来看一下都有什么信息?
+  //几乎包含你请求的所有信息
+  d">
+<meta name="twitter:image" content="http://i1.piimg.com/4851/9fb932769757be5b.png">
+
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">这是最好的时代 也是最坏的时代</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          而我们要成为更好的自己
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/something" title="" class="">有料</a></li>
+              
+                
+                <li class="navigation__item"><a href="/tags" title="" class="">标签</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">laravel的Request对象文件上传和helper函数</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-05-20" class="post-meta__date date">2016-05-20</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/lararvel-Request对象-laravel辅助函数/">lararvel Request对象 laravel辅助函数</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h5 id="之前看见文件上传就头疼，自从用laravel之后再也不疼了-哈哈今天就看下炒鸡简单的request对象的文件上传"><a href="#之前看见文件上传就头疼，自从用laravel之后再也不疼了-哈哈今天就看下炒鸡简单的request对象的文件上传" class="headerlink" title="之前看见文件上传就头疼，自从用laravel之后再也不疼了~~  哈哈今天就看下炒鸡简单的request对象的文件上传"></a>之前看见文件上传就头疼，自从用laravel之后再也不疼了~~  哈哈今天就看下炒鸡简单的request对象的文件上传</h5><blockquote>
+<p>关于request我们从http角度看..</p>
+</blockquote>
+<p><img src="http://i1.piimg.com/4851/9fb932769757be5b.png" alt="https"></p>
+<h4 id="那么在laravel中如何声明一个request对象呢？"><a href="#那么在laravel中如何声明一个request对象呢？" class="headerlink" title="那么在laravel中如何声明一个request对象呢？"></a>那么在laravel中如何声明一个request对象呢？</h4><pre>
+1.第一种方法
+public function test(Request $requset){
+  //打印出来看一下都有什么信息?
+  //几乎包含你请求的所有信息
+  dd($request);
+}
+-----------------
+2.第二种方法
+public function (){
+  $request = request;
+  dd($request);
+}
+</pre>
+
+<p>接下来我们写一个简单的文件上传的例子吧..</p>
+<p>（这个写法是以blade.php结尾的文件）</p>
+<pre><code>&lt;p&gt;文件上传&lt;/p&gt;
+&lt;form action=&quot;&quot; method=&apos;post&apos; enctype=&apos;multipart/form-data&apos;&gt;&lt;/form&gt;
+{!!csrf_field()!!}
+&lt;p&gt;&lt;input type=&quot;file&quot; name=&apos;pic&apos;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;input type=&quot;submit&quot; value=&quot;提交&quot;&gt;&lt;/p&gt;
+</code></pre><p>  在对应的在方法中：</p>
+<pre>
+
+  public function upload(Request $req){
+    //文件路径
+    $path = '/imgs/';
+    //文件名称
+    $fileName = str_random(5).jpg;
+    //开始上传
+    //这个file里面的参数是blade模板中name的值。
+    $req->file('pic')->move($path,$fileName);
+
+  }
+
+</pre>
+
+
+<p>感受到了request对象的强大了吗？</p>
+<h3 id="helper函数"><a href="#helper函数" class="headerlink" title="helper函数"></a>helper函数</h3><p>  laravel提供了很多helper函数，一些caodan的问题，也许只要一个简单的函数就解决了~~ 那么我们拉总结下常用的函数吧。</p>
+ <li>数组函数</li>
+
+<li>字符串函数</li>
+
+<li>路径函数</li>
+
+<li>url函数</li>
+
+<li>其他</li>
+
+<p>这里是laravel的<a>helper函数</a></p>
+<pre>
+# 数组函数
+
+# array_collapse();
+
+//一个二维数组，将二维数组中的每个值取出来放在一个数组中
+$a = [[1,2,3],[4,5,6],[6,7,7]];
+$rs = array_collapse($a);
+输出：一个一维数组
+
+# str_limit  效果：[我是新闻...]
+str_limit('哈哈哈今天真开心'，8);  
+//第二个参数是多少个英文字符长度，其中中文占2个英文字节的长度。
+
+# str_random();//生成随机字符串
+
+print_r（str_random(6));
+生成6位字母数组随机的字符串，这是个生成图片的好函数 哈哈~
+
+
+</pre>
+
+<p> e()函数： 实体转义</p>
+<h3 id="路径函数："><a href="#路径函数：" class="headerlink" title="路径函数："></a>路径函数：</h3> <pre>
+//返回项目app的路径
+ app_path();
+
+ //返回项目的路径
+ base_path();
+ //返回项目的public的目录路径
+ public_path();
+ //返回项目配置文件所在的路径
+ config_path();
+ </pre>
+
+<h2 id="url函数"><a href="#url函数" class="headerlink" title="url函数"></a>url函数</h2><pre>
+1.url();
+url('msg/show',[3]);
+url('',["msg","show","3"]);
+url('msg/show',[3,"id"]);
+
+2.action();配合路由器生成规范的url;
+action('MsgController@del',[3]);
+
+3.back()；返回上一页
+有的时候back()可以替换redirect('/');
+
+ </pre>
+
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3> <pre>
+ 1. 加密密码：
+ bcrypt(123456);
+
+ 2.生成防跨域提交的随机字符串
+ csrf_token();
+
+ 3.生成方跨域提交的隐藏字段
+(!!csrf_field()!!);
+
+4.打印变量，并且终止执行，一般调制的时候使用；  
+dd();
+5.重定向
+redirect();
+6.request对象
+$req = request();
+</pre>
+
+  </section>
+
+  
+  
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2017 |<i class='icon icon-social-github'></i> Hello World | <a href="https://github.com/daishiqi">Daisy's GitHub</a>
+
+</footer>
+
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
