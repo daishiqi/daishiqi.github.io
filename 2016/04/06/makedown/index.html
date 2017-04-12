@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      sublime实现markdown编写及预览 | Daisy&#39;s Blog
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="Daisy">
+    
+    
+
+    <meta name="description" content="Hey, this is XUR.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sublime实现markdown编写及预览 | Daisy's Blog">
+<meta property="og:url" content="http://yoursite.com/2016/04/06/makedown/index.html">
+<meta property="og:site_name" content="Daisy's Blog">
+<meta property="og:description" content="Hey, this is XUR.">
+<meta property="og:updated_time" content="2017-04-12T15:21:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sublime实现markdown编写及预览 | Daisy's Blog">
+<meta name="twitter:description" content="Hey, this is XUR.">
+
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">这是最好的时代 也是最坏的时代</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+        <p class="panel-cover__description">
+          而我们要成为更好的自己
+        </p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/something" title="" class="">有料</a></li>
+              
+                
+                <li class="navigation__item"><a href="/tags" title="" class="">标签</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">sublime实现markdown编写及预览</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-04-06" class="post-meta__date date">2016-04-06</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/编辑器/">编辑器</a>
+            </font>
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h2 id="sublime实现markdown编写及预览"><a href="#sublime实现markdown编写及预览" class="headerlink" title="sublime实现markdown编写及预览"></a>sublime实现markdown编写及预览</h2><h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">个人使用sublime编写markdown的频率比较高，为了编写和预览，就整理了以下的方法。</div></pre></td></tr></table></figure>
+<h3 id="安装Sublime-Text"><a href="#安装Sublime-Text" class="headerlink" title="安装Sublime Text"></a>安装Sublime Text</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">无论是Sublime2还是Sublime3，都是支持markdown标记语言的，所以我们不必为选择那个版本而纠结。</div></pre></td></tr></table></figure>
+<h3 id="安装需要的包"><a href="#安装需要的包" class="headerlink" title="安装需要的包"></a>安装需要的包</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">为了达成我们的目标，我们通常来说会安装下面的一些package。</div><div class="line">    package control install</div><div class="line">    markdown editing</div><div class="line">    markdown preview</div><div class="line">具体步骤：</div><div class="line">    按住 Ctrl + Shift + P调出一个弹出的输入框</div><div class="line">    输入package control install，等待左下角的缓存结束</div><div class="line">    在输入框分别输入 markdown editing 和 markdown preview</div><div class="line">    我们就完成我们需要的包的安装了，接下来重启Sublime之后即可使用。</div></pre></td></tr></table></figure>
+<h3 id="MarkdownPreview介绍"><a href="#MarkdownPreview介绍" class="headerlink" title="MarkdownPreview介绍"></a>MarkdownPreview介绍</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">在文件最前面添加[TOC]会自动生成目录</div><div class="line">按Ctrl + B会自动生成网页html；</div></pre></td></tr></table></figure>
+<h3 id="自定义配置"><a href="#自定义配置" class="headerlink" title="自定义配置"></a>自定义配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">理论上到这里就该结束了，但是上面的步骤比较繁琐，每次修改文档后都需要Ctrl + B生成html文件，然后再在浏览器上刷新显示。接下来我们做个自定义的配置。</div><div class="line"></div><div class="line">选择菜单preference–&gt; key bunding user(首选项–&gt; 按键绑定-用户)</div><div class="line">输入：</div><div class="line">    [</div><div class="line">        &#123;<span class="string">"keys"</span>: [<span class="string">"alt+m"</span>], <span class="string">"command"</span>: <span class="string">"markdown_preview"</span>, <span class="string">"args"</span>: &#123; <span class="string">"target"</span>: <span class="string">"browser"</span>&#125;&#125;</div><div class="line">    ]</div></pre></td></tr></table></figure>
+<h3 id="OmniMarkupPreviwer"><a href="#OmniMarkupPreviwer" class="headerlink" title="OmniMarkupPreviwer"></a>OmniMarkupPreviwer</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">实时在浏览器中预览，而MarkdownPreview是需要手动生成的和手动刷新的。</div><div class="line">如果双屏的话，应该具有不错的体验。</div></pre></td></tr></table></figure>
+<h4 id="1-安装"><a href="#1-安装" class="headerlink" title="1 安装"></a>1 安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">按住 Ctrl + Shift + P调出一个弹出的输入框</div><div class="line">输入package control install,等待左下角的缓存结束</div><div class="line">在输入框输入 OmniMarkupPreviwer，安装</div></pre></td></tr></table></figure>
+<h4 id="2-快捷键"><a href="#2-快捷键" class="headerlink" title="2 快捷键"></a>2 快捷键</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Ctrl + Alt + O: Preview Markup <span class="keyword">in</span> Browser</div><div class="line">Ctrl + Alt + X: Export Markup as HTML</div><div class="line">Ctrl + Alt + C: Copy Markup as HTML</div></pre></td></tr></table></figure>
+
+  </section>
+
+  
+  
+
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2017 |<i class='icon icon-social-github'></i> Hello World | <a href="https://github.com/daishiqi">Daisy's GitHub</a>
+
+</footer>
+
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
