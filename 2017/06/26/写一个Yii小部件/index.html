@@ -7,7 +7,7 @@
     
 
     <title>
-      Archives: 2017/3
+      写一个Yii小部件 | Daisy&#39;s Blog
     </title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -16,15 +16,42 @@
     
     
 
-    <meta name="description" content="代士琪，blog，php，学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Archives: 2017/3">
-<meta property="og:url" content="http://yoursite.com/archives/2017/03/index.html">
+    <meta name="description" content="小部件
+ 小部件是视图中使用的，可重用的单元，使用面向对象的方式创建复杂和配置的用户界面单元。
+创建小部件
+
+从yii\base\Widget继承
+
+2.重写yii\base\Widget::init(),方法中主要处理小部件的属性。
+3.重写yii\base\Widget::run(),run()方法包含小部件主要渲染结果的代码。
+4.渲染结果可在run（）方法中打印输入，并且以字符串的形式输出">
+<meta property="og:type" content="article">
+<meta property="og:title" content="写一个Yii小部件 | Daisy's Blog">
+<meta property="og:url" content="http://yoursite.com/2017/06/26/写一个Yii小部件/index.html">
 <meta property="og:site_name" content="Daisy's Blog">
-<meta property="og:description" content="代士琪，blog，php，学习笔记">
+<meta property="og:description" content="小部件
+ 小部件是视图中使用的，可重用的单元，使用面向对象的方式创建复杂和配置的用户界面单元。
+创建小部件
+
+从yii\base\Widget继承
+
+2.重写yii\base\Widget::init(),方法中主要处理小部件的属性。
+3.重写yii\base\Widget::run(),run()方法包含小部件主要渲染结果的代码。
+4.渲染结果可在run（）方法中打印输入，并且以字符串的形式输出">
+<meta property="og:image" content="http://i1.buimg.com/1949/6b6c2ded5ab1b4e5.png">
+<meta property="og:updated_time" content="2017-06-25T16:41:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Archives: 2017/3">
-<meta name="twitter:description" content="代士琪，blog，php，学习笔记">
+<meta name="twitter:title" content="写一个Yii小部件 | Daisy's Blog">
+<meta name="twitter:description" content="小部件
+ 小部件是视图中使用的，可重用的单元，使用面向对象的方式创建复杂和配置的用户界面单元。
+创建小部件
+
+从yii\base\Widget继承
+
+2.重写yii\base\Widget::init(),方法中主要处理小部件的属性。
+3.重写yii\base\Widget::run(),run()方法包含小部件主要渲染结果的代码。
+4.渲染结果可在run（）方法中打印输入，并且以字符串的形式输出">
+<meta name="twitter:image" content="http://i1.buimg.com/1949/6b6c2ded5ab1b4e5.png">
 
     
     
@@ -156,47 +183,56 @@ classes that you can use:
         <div class="content-wrapper__inner entry">
             
 
+<article class="post-container post-container--single">
 
-  <h1 class="archive-title">Archives: 2017/3</h1>
-  <hr class="post-list__divider" />
-
-
-<div class="main-post-list">
-    <ol class="post-list">
+  <header class="post-header">
+    
+    <h1 class="post-title">写一个Yii小部件</h1>
 
     
-    <li>
 
-      <h2 class="post-list__post-title post-title">
-        <a href="/2017/03/14/优化索引/" title="link to 优化索引">优化索引</a>
-      </h2>
+    <div class="post-meta">
+      <time datetime="2017-06-26" class="post-meta__date date">2017-06-26</time> 
 
-      <div class="post-list__meta">
+      <span class="post-meta__tags tags">
 
-        <time datetime="2017-03-14" class="post-list__meta--date date">2017-03-14</time>
-      </div>
+          
 
-      <div class="excerpt">
-        
-      </div>
+          
+             &#8226; 标签:
+            <font class="tags">
+              <a class="tags-link" href="/tags/yii-Widget/">yii Widget</a>
+            </font>
+          
 
-      <hr class="post-list__divider" />
-    </li>
-    
-  </ol>
-
-  <hr class="post-list__divider " />
-
-<nav class="pagination" role="navigation">
-    
-
-    <span class="pagination__page-number"> 1 / 1</span>
+      </span>
+    </div>
     
     
-</nav>
 
+  </header>
 
-</div>
+  <section id="post-content" class="article-content post">
+    <h3 id="小部件"><a href="#小部件" class="headerlink" title="小部件"></a>小部件</h3><hr>
+<p> 小部件是视图中使用的，可重用的单元，使用面向对象的方式创建复杂和配置的用户界面单元。</p>
+<h3 id="创建小部件"><a href="#创建小部件" class="headerlink" title="创建小部件"></a>创建小部件</h3><hr>
+<ol>
+<li>从yii\base\Widget继承</li>
+</ol>
+<p>2.重写yii\base\Widget::init(),方法中主要处理小部件的属性。</p>
+<p>3.重写yii\base\Widget::run(),run()方法包含小部件主要渲染结果的代码。</p>
+<p>4.渲染结果可在run（）方法中打印输入，并且以字符串的形式输出.</p>
+<h3 id="使用小部件"><a href="#使用小部件" class="headerlink" title="使用小部件"></a>使用小部件</h3><hr>
+<p>在视图中调用yii\base\Widget::widget() 方法来使用小部件。方法的参数是一个数组，用来初始化小部件，然后就会返回小部件渲染后的结果。</p>
+<p><img src="http://i1.buimg.com/1949/6b6c2ded5ab1b4e5.png" alt="image"></p>
+
+  </section>
+
+  
+  
+
+</article>
+
 
             <footer class="footer">
 
@@ -226,6 +262,18 @@ classes that you can use:
 
 
     
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
     
     
     <!--kill ie6 -->
